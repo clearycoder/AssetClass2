@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using MySql.Data.MySqlClient;
 using System.DirectoryServices.ActiveDirectory;
+using System.Windows.Input;
 
 namespace AssetClass2
 {
@@ -20,7 +21,7 @@ namespace AssetClass2
 
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); // used for initializing interaction of window C# and XAML code
             _connectionString = App.ConnectionString;
             _assetClassRepository = new AssetClassRepository(_connectionString);
 
@@ -32,12 +33,21 @@ namespace AssetClass2
             
         }
 
-        private void CloseWindow(object sender, RoutedEventArgs e)
+        private void TitleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e) // code for allowing the user to drag the app window 
+        {
+            if (e.ButtonState == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+
+
+        private void CloseWindow(object sender, RoutedEventArgs e) // code for window close button for users
         {
             this.Close();
         }
 
-        private void MinimizeWindow(object sender, RoutedEventArgs e)
+        private void MinimizeWindow(object sender, RoutedEventArgs e) // code for window minimize button for users
         {
             this.WindowState = WindowState.Minimized;
         }

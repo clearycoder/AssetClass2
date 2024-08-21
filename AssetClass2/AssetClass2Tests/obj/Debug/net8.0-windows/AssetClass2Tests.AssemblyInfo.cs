@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AssetClass2Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e009eeee0df8265ae41730d335b75ee33ca7e2bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+913f50d25d51b76e1a2beef514ecfe9cdf7e7a2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("AssetClass2Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AssetClass2Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

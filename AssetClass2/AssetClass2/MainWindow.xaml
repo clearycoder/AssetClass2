@@ -8,11 +8,12 @@
         Title="Asset Class Analyzer" 
         Height="450" Width="800"
         Background="Navy"
-        WindowStyle="None">
+        WindowStyle="None"
+        ResizeMode="NoResize">
 
     <Grid>
         <!-- Aesthetics: Title Bar -->
-        <Border Background="Gray" Height="30" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+        <Border Background="Gray" Height="30" HorizontalAlignment="Stretch" VerticalAlignment="Top" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
             <Grid>
                 <TextBlock Text="Asset Class Analyzer" Foreground="White" VerticalAlignment="Center" Margin="10,0,0,0"/>
                 <!-- Minimize Button -->
@@ -35,18 +36,18 @@
         <ComboBox Name="YearDropDown" HorizontalAlignment="Left" Height="25" Margin="580,160,0,0" VerticalAlignment="Top" Width="115"/>
 
         <!-- Output -->
-        <TextBox Name="Lowest1000" HorizontalAlignment="Left" Height="34" Margin="80,382,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
-        <TextBox Name="Mean1000" HorizontalAlignment="Center" Height="35" Margin="0,381,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
-        <TextBox Name="Highest1000" Height="34" Margin="580,382,80,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox Name="Lowest1000" HorizontalAlignment="Left" Height="40" Margin="80,360,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" FontSize="20"/>
+        <TextBox Name="Mean1000" HorizontalAlignment="Center" Height="40" Margin="0,360,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140" FontSize="20"/>
+        <TextBox Name="Highest1000" Height="40" Margin="580,360,80,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="20"/>
 
         <!-- Statements -->
         <TextBlock Name="Overall1000Stmt" FontSize="16" HorizontalAlignment="Center" Height="44" Margin="0,247,0,0" TextWrapping="Wrap" Text="With an initial investment of $1000 and using historical return data, this is the range of values for your investment after the number of years you selected:" VerticalAlignment="Top" Width="620"/>
-        <TextBlock Name="Lowest1000Stmt" FontSize="14" HorizontalAlignment="Left" Height="35" Margin="80,330,0,0" TextWrapping="Wrap" Text="Lowest Average Rolling Return:" VerticalAlignment="Top" Width="176"/>
-        <TextBlock Name="Mean1000Stmt" FontSize="14" HorizontalAlignment="Left" Margin="330,330,0,0" TextWrapping="Wrap" Text="Mean Average Rolling Return:" VerticalAlignment="Top" Height="35" Width="175"/>
-        <TextBlock Name="Highest1000Stmt" FontSize="14" HorizontalAlignment="Left" Height="35" Margin="580,330,0,0" TextWrapping="Wrap" Text="Highest Average Rolling Return:" VerticalAlignment="Top" Width="175"/>
-        <TextBlock Name="ChooseIndexStmt" FontSize="14" HorizontalAlignment="Left" Height="19" Margin="80,164,0,0" TextWrapping="Wrap" Text="Which index?" VerticalAlignment="Top" Width="85"/>
-        <TextBlock Name="HowManyYearStmt" FontSize="14" HorizontalAlignment="Left" Height="15" Margin="454,163,0,0" TextWrapping="Wrap" Text="How Many Years?" VerticalAlignment="Top" Width="115"/>
-        <TextBlock Name="ExplanationStmt" FontSize="16" HorizontalAlignment="Center" Height="98" Margin="0,40,0,0" TextWrapping="Wrap" Text="Below you will be able to choose an index for investing and a timeframe for how long you would likely be keeping your money invested. This program will show you the mean, highest, and lowest historical average rolling returns applicable to the index you have selected for your chosen number of years. The hope is that you will be better prepared for the ups and downs that come with investing." VerticalAlignment="Top" Width="760"/>
+        <TextBlock Name="Lowest1000Stmt" FontSize="14" HorizontalAlignment="Left" Height="35" Margin="80,330,0,0" TextWrapping="Wrap" Text="Lowest Rolling Return:" VerticalAlignment="Top" Width="176"/>
+        <TextBlock Name="Mean1000Stmt" FontSize="14" HorizontalAlignment="Left" Margin="330,330,0,0" TextWrapping="Wrap" Text="Average Rolling Return:" VerticalAlignment="Top" Height="35" Width="175"/>
+        <TextBlock Name="Highest1000Stmt" FontSize="14" HorizontalAlignment="Left" Height="35" Margin="580,330,0,0" TextWrapping="Wrap" Text="Highest Rolling Return:" VerticalAlignment="Top" Width="175"/>
+        <TextBlock Name="ChooseIndexStmt" FontSize="14" HorizontalAlignment="Left" Height="20" Margin="80,164,0,0" TextWrapping="Wrap" Text="Which index?" VerticalAlignment="Top" Width="85"/>
+        <TextBlock Name="HowManyYearStmt" FontSize="14" HorizontalAlignment="Left" Height="20" Margin="454,163,0,0" TextWrapping="Wrap" Text="How Many Years?" VerticalAlignment="Top" Width="115"/>
+        <TextBlock Name="ExplanationStmt" FontSize="16" HorizontalAlignment="Center" Height="98" Margin="0,40,0,0" TextWrapping="Wrap" Text="Below you will be able to choose an index for investing and a timeframe for how long you would likely be keeping your money invested. This program will show you the lowest, average, and highest historical rolling returns applicable to the index you have selected for your chosen number of years. The hope is that you will be better prepared for the ups and downs that come with investing." VerticalAlignment="Top" Width="760"/>
 
         <!-- Aesthetics: Borders -->
         <Border BorderBrush="Wheat" BorderThickness="2" HorizontalAlignment="Center" Height="74" Margin="0,232,0,0" VerticalAlignment="Top" Width="670"/>
